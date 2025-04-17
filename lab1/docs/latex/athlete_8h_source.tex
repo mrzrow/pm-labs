@@ -1,0 +1,46 @@
+\hypertarget{athlete_8h_source}{}\doxysection{athlete.\+h}
+\mbox{\hyperlink{athlete_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef ATHLETE\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define ATHLETE\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classAthlete}{Athlete}} \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     std::string \mbox{\hyperlink{classAthlete_adb548d1d479933641df5c1849a4ad23e}{name}};}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} \mbox{\hyperlink{classAthlete_afa26355715b2ec2313273a1993779797}{age}};}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} \mbox{\hyperlink{classAthlete_a27ecf2b484a45b8cf9a5919e143bae38}{height}};}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} \mbox{\hyperlink{classAthlete_ad00345de19c54ae92bc5e44408b03015}{weight}};}
+\DoxyCodeLine{14     std::string \mbox{\hyperlink{classAthlete_a9f6af1efefe03755486b40b29f512e90}{sport}};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{classAthlete_ae7ff9262da2001c9a8627aed0f0cea5a}{Athlete}}() \{\}}
+\DoxyCodeLine{28     \mbox{\hyperlink{classAthlete_ac922022122defac75e4ad96f3e8a2a50}{Athlete}}(\textcolor{keyword}{const} std::string\& n, \textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} h, \textcolor{keywordtype}{int} w, \textcolor{keyword}{const} std::string\& s):}
+\DoxyCodeLine{29         \mbox{\hyperlink{classAthlete_adb548d1d479933641df5c1849a4ad23e}{name}}(n), \mbox{\hyperlink{classAthlete_afa26355715b2ec2313273a1993779797}{age}}(a), \mbox{\hyperlink{classAthlete_a27ecf2b484a45b8cf9a5919e143bae38}{height}}(h), \mbox{\hyperlink{classAthlete_ad00345de19c54ae92bc5e44408b03015}{weight}}(w), \mbox{\hyperlink{classAthlete_a9f6af1efefe03755486b40b29f512e90}{sport}}(s) \{\}}
+\DoxyCodeLine{31     \mbox{\hyperlink{classAthlete_a8afd915bce6c257a4f512c97fe42a518}{\string~Athlete}}() \{\}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAthlete_a9077e846369bb1b382cfed453dadfbda}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classAthlete}{Athlete}}\& other) \{}
+\DoxyCodeLine{35         \textcolor{keywordflow}{return} \mbox{\hyperlink{classAthlete_a9f6af1efefe03755486b40b29f512e90}{sport}} == other.\mbox{\hyperlink{classAthlete_a9f6af1efefe03755486b40b29f512e90}{sport}} \&\&}
+\DoxyCodeLine{36                \mbox{\hyperlink{classAthlete_adb548d1d479933641df5c1849a4ad23e}{name}}  == other.\mbox{\hyperlink{classAthlete_adb548d1d479933641df5c1849a4ad23e}{name}}  \&\&}
+\DoxyCodeLine{37                \mbox{\hyperlink{classAthlete_afa26355715b2ec2313273a1993779797}{age}}   == other.\mbox{\hyperlink{classAthlete_afa26355715b2ec2313273a1993779797}{age}};}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAthlete_a7a2744c2e0e3b344f9161f11875d04ad}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{classAthlete}{Athlete}}\& other) \{}
+\DoxyCodeLine{42         \textcolor{keywordflow}{if} ( \mbox{\hyperlink{classAthlete_a9f6af1efefe03755486b40b29f512e90}{sport}} != other.\mbox{\hyperlink{classAthlete_a9f6af1efefe03755486b40b29f512e90}{sport}} )}
+\DoxyCodeLine{43             \textcolor{keywordflow}{return} \mbox{\hyperlink{classAthlete_a9f6af1efefe03755486b40b29f512e90}{sport}} < other.\mbox{\hyperlink{classAthlete_a9f6af1efefe03755486b40b29f512e90}{sport}};}
+\DoxyCodeLine{44         \textcolor{keywordflow}{if} ( \mbox{\hyperlink{classAthlete_adb548d1d479933641df5c1849a4ad23e}{name}} != other.\mbox{\hyperlink{classAthlete_adb548d1d479933641df5c1849a4ad23e}{name}} )}
+\DoxyCodeLine{45             \textcolor{keywordflow}{return} \mbox{\hyperlink{classAthlete_adb548d1d479933641df5c1849a4ad23e}{name}} < other.\mbox{\hyperlink{classAthlete_adb548d1d479933641df5c1849a4ad23e}{name}};}
+\DoxyCodeLine{46         \textcolor{keywordflow}{return} \mbox{\hyperlink{classAthlete_afa26355715b2ec2313273a1993779797}{age}} < other.\mbox{\hyperlink{classAthlete_afa26355715b2ec2313273a1993779797}{age}};}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAthlete_a44883d5644afd6148c0110476103d39d}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classAthlete}{Athlete}}\& other) \{ \textcolor{keywordflow}{return} !(*\textcolor{keyword}{this} == other);              \}}
+\DoxyCodeLine{52     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAthlete_a394bc86500e3df570084c11933fe9ef1}{operator<=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classAthlete}{Athlete}}\& other) \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{this} == other || *\textcolor{keyword}{this} < other; \}}
+\DoxyCodeLine{54     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAthlete_aee7d1cc61e52623caa67dfe45af51874}{operator> }}(\textcolor{keyword}{const} \mbox{\hyperlink{classAthlete}{Athlete}}\& other) \{ \textcolor{keywordflow}{return} !(*\textcolor{keyword}{this} <= other);              \}}
+\DoxyCodeLine{56     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classAthlete_ab30ec52850cd8328503889bd0ba60ec9}{operator>=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classAthlete}{Athlete}}\& other) \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{this} > other || *\textcolor{keyword}{this} == other; \}}
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

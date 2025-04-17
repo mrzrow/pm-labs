@@ -1,0 +1,75 @@
+\hypertarget{sorting__algs_8h_source}{}\doxysection{sorting\+\_\+algs.\+h}
+\mbox{\hyperlink{sorting__algs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SORTING\_ALGS\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SORTING\_ALGS\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{11 \textcolor{keyword}{template}<\textcolor{keyword}{class} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{sorting__algs_8h_a6965f1a06ccc47d31106e1e1f014fef9}{insertSort}}(T* a, \textcolor{keywordtype}{long} size) \{}
+\DoxyCodeLine{12     T x;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{long} i, j;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keywordflow}{for} (i = 0; i < size; i++) \{}
+\DoxyCodeLine{16         x = a[i];}
+\DoxyCodeLine{17   }
+\DoxyCodeLine{18         \textcolor{keywordflow}{for} ( j=i-\/1; j>=0 \&\& a[j] > x; j-\/-\/)}
+\DoxyCodeLine{19             a[j+1] = a[j];}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         a[j+1] = x;}
+\DoxyCodeLine{22   \}}
+\DoxyCodeLine{23 \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{30 \textcolor{keyword}{template}<\textcolor{keyword}{class} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{sorting__algs_8h_a32b54eecc3a186f34a3120dbf38f33ff}{downHeap}}(T* a, \textcolor{keywordtype}{long} k, \textcolor{keywordtype}{long} n) \{}
+\DoxyCodeLine{31     T new\_elem;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{long} child;}
+\DoxyCodeLine{33     new\_elem = a[k];}
+\DoxyCodeLine{34   }
+\DoxyCodeLine{35     \textcolor{keywordflow}{while}(k <= n/2) \{}
+\DoxyCodeLine{36         child = 2*k;}
+\DoxyCodeLine{37         \textcolor{keywordflow}{if}( child < n \&\& a[child] < a[child+1] ) child++;}
+\DoxyCodeLine{38         \textcolor{keywordflow}{if}( new\_elem >= a[child] ) \textcolor{keywordflow}{break}; }
+\DoxyCodeLine{39         a[k] = a[child];}
+\DoxyCodeLine{40         k = child;}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42     a[k] = new\_elem;}
+\DoxyCodeLine{43 \}}
+\DoxyCodeLine{49 \textcolor{keyword}{template}<\textcolor{keyword}{class} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{sorting__algs_8h_aac714b67bc4f8290021748f8c29c5543}{heapSort}}(T* a, \textcolor{keywordtype}{long} size) \{}
+\DoxyCodeLine{50     \textcolor{keywordtype}{long} i;}
+\DoxyCodeLine{51     T temp;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordflow}{for}(i=size/2-\/1; i >= 0; i-\/-\/)}
+\DoxyCodeLine{54         \mbox{\hyperlink{sorting__algs_8h_a32b54eecc3a186f34a3120dbf38f33ff}{downHeap}}(a, i, size-\/1);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{keywordflow}{for}(i=size-\/1; i > 0; i-\/-\/) \{}
+\DoxyCodeLine{57         std::swap(a[i], a[0]);}
+\DoxyCodeLine{58         \mbox{\hyperlink{sorting__algs_8h_a32b54eecc3a186f34a3120dbf38f33ff}{downHeap}}(a, 0, i-\/1);}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{67 \textcolor{keyword}{template}<\textcolor{keyword}{class} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{sorting__algs_8h_a8ba4f4750884f9c5a41b8d72f22ff28a}{quickSortR}}(T* a, \textcolor{keywordtype}{long} size)}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69     \textcolor{keywordtype}{long} i = 0, j = size-\/1;}
+\DoxyCodeLine{70     T p = a[ size>>1 ];}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{73         \textcolor{keywordflow}{while} ( a[i] < p ) i++;}
+\DoxyCodeLine{74         \textcolor{keywordflow}{while} ( a[j] > p ) j-\/-\/;}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{keywordflow}{if} (i <= j) \{}
+\DoxyCodeLine{77             std::swap(a[i], a[j]);}
+\DoxyCodeLine{78             i++; j-\/-\/;}
+\DoxyCodeLine{79         \}}
+\DoxyCodeLine{80     \} \textcolor{keywordflow}{while} ( i<=j );}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keywordflow}{if} ( j > 0 ) \mbox{\hyperlink{sorting__algs_8h_a8ba4f4750884f9c5a41b8d72f22ff28a}{quickSortR}}(a, j);}
+\DoxyCodeLine{83     \textcolor{keywordflow}{if} ( size > i ) \mbox{\hyperlink{sorting__algs_8h_a8ba4f4750884f9c5a41b8d72f22ff28a}{quickSortR}}(a+i, size-\/i);}
+\DoxyCodeLine{84 \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{91 \textcolor{keyword}{template}<\textcolor{keyword}{class} T> \textcolor{keywordtype}{void} \mbox{\hyperlink{sorting__algs_8h_a2b572929aee750c05d60df0485c45769}{standartSort}}(T* a, \textcolor{keywordtype}{long} size) \{}
+\DoxyCodeLine{92     std::sort(a, a + size);}
+\DoxyCodeLine{93 \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

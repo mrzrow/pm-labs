@@ -1,0 +1,75 @@
+\hypertarget{utils_8h}{}\doxysection{utils.\+h File Reference}
+\label{utils_8h}\index{utils.h@{utils.h}}
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}athlete.\+h\char`\"{}}\newline
+Include dependency graph for utils.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{utils_8h_a98826c59d813bc18784a54ed17f2665a}{random\+String}} (int length)
+\item 
+void \mbox{\hyperlink{utils_8h_a5ca11d3ae5684c6acda9ed1a27c25c05}{generate\+Athletes\+CSV}} (const std\+::string \&filename, int total=101000)
+\item 
+void \mbox{\hyperlink{utils_8h_a0e4214e1da5fb8f2cb7c1c17123a3260}{fill\+Athlete\+Array}} (\mbox{\hyperlink{classAthlete}{Athlete}} $\ast$arr, int n, const std\+::string \&filename=\char`\"{}athletes.\+csv\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utils_8h_a0e4214e1da5fb8f2cb7c1c17123a3260}\label{utils_8h_a0e4214e1da5fb8f2cb7c1c17123a3260}} 
+\index{utils.h@{utils.h}!fillAthleteArray@{fillAthleteArray}}
+\index{fillAthleteArray@{fillAthleteArray}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{fillAthleteArray()}{fillAthleteArray()}}
+{\footnotesize\ttfamily void fill\+Athlete\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAthlete}{Athlete}} $\ast$}]{arr,  }\item[{int}]{n,  }\item[{const std\+::string \&}]{filename = {\ttfamily \char`\"{}athletes.csv\char`\"{}} }\end{DoxyParamCaption})}
+
+Fill array with \mbox{\hyperlink{classAthlete}{Athlete}} objects 
+\begin{DoxyParams}{Parameters}
+{\em arr} & array to fill \\
+\hline
+{\em n} & number of athletes \\
+\hline
+{\em filename} & name of the file to read \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils_8h_a5ca11d3ae5684c6acda9ed1a27c25c05}\label{utils_8h_a5ca11d3ae5684c6acda9ed1a27c25c05}} 
+\index{utils.h@{utils.h}!generateAthletesCSV@{generateAthletesCSV}}
+\index{generateAthletesCSV@{generateAthletesCSV}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{generateAthletesCSV()}{generateAthletesCSV()}}
+{\footnotesize\ttfamily void generate\+Athletes\+CSV (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{int}]{total = {\ttfamily 101000} }\end{DoxyParamCaption})}
+
+Generates file of athletes data 
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of the file to save \\
+\hline
+{\em total} & number of lines of data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils_8h_a98826c59d813bc18784a54ed17f2665a}\label{utils_8h_a98826c59d813bc18784a54ed17f2665a}} 
+\index{utils.h@{utils.h}!randomString@{randomString}}
+\index{randomString@{randomString}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{randomString()}{randomString()}}
+{\footnotesize\ttfamily std\+::string random\+String (\begin{DoxyParamCaption}\item[{int}]{length }\end{DoxyParamCaption})}
+
+Generates random string 
+\begin{DoxyParams}{Parameters}
+{\em length} & length of the string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+generated string 
+\end{DoxyReturn}

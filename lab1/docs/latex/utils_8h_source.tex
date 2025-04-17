@@ -1,0 +1,74 @@
+\hypertarget{utils_8h_source}{}\doxysection{utils.\+h}
+\mbox{\hyperlink{utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef UTILS\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define UTILS\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{athlete_8h}{athlete.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{16 std::string \mbox{\hyperlink{utils_8h_a98826c59d813bc18784a54ed17f2665a}{randomString}}(\textcolor{keywordtype}{int} length) \{}
+\DoxyCodeLine{17     \textcolor{keyword}{const} std::string chars = \textcolor{stringliteral}{"{}abcdefghijklmnopqrstuvwxyz"{}};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     std::string result;}
+\DoxyCodeLine{20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < length; ++i)}
+\DoxyCodeLine{21         result += chars[rand() \% chars.size()];}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{23 \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} \mbox{\hyperlink{utils_8h_a5ca11d3ae5684c6acda9ed1a27c25c05}{generateAthletesCSV}}(\textcolor{keyword}{const} std::string\& filename, \textcolor{keywordtype}{int} total = 101000) \{}
+\DoxyCodeLine{32     \textcolor{keyword}{const} std::string sports[] = \{\textcolor{stringliteral}{"{}Football"{}}, \textcolor{stringliteral}{"{}Basketball"{}}, \textcolor{stringliteral}{"{}Tennis"{}}, \textcolor{stringliteral}{"{}Swimming"{}}, \textcolor{stringliteral}{"{}Running"{}}\};}
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} numSport = 5;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     std::ofstream file(filename);}
+\DoxyCodeLine{36     \textcolor{keywordflow}{if} (!file.is\_open()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < total; ++i) \{}
+\DoxyCodeLine{39         std::string name = \mbox{\hyperlink{utils_8h_a98826c59d813bc18784a54ed17f2665a}{randomString}}(5 + rand() \% 5);}
+\DoxyCodeLine{40         \textcolor{keywordtype}{int} age    = 18  + rand() \% 23;}
+\DoxyCodeLine{41         \textcolor{keywordtype}{int} height = 160 + rand() \% 41;}
+\DoxyCodeLine{42         \textcolor{keywordtype}{int} weight = 50  + rand() \% 51;}
+\DoxyCodeLine{43         std::string sport = sports[rand() \% numSport];}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         file << name << \textcolor{stringliteral}{"{},"{}} << age << \textcolor{stringliteral}{"{},"{}} << height << \textcolor{stringliteral}{"{},"{}} << weight << \textcolor{stringliteral}{"{},"{}} << sport << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     file.close();}
+\DoxyCodeLine{49 \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{58 \textcolor{keywordtype}{void} \mbox{\hyperlink{utils_8h_a0e4214e1da5fb8f2cb7c1c17123a3260}{fillAthleteArray}}(\mbox{\hyperlink{classAthlete}{Athlete}}* arr, \textcolor{keywordtype}{int} n, \textcolor{keyword}{const} std::string\& filename = \textcolor{stringliteral}{"{}athletes.csv"{}}) \{}
+\DoxyCodeLine{59     std::ifstream file(filename);}
+\DoxyCodeLine{60     \textcolor{keywordflow}{if} (!file.is\_open()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     std::string line;}
+\DoxyCodeLine{63     \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \textcolor{keywordflow}{while} (count < n \&\& std::getline(file, line)) \{}
+\DoxyCodeLine{66         std::stringstream ss(line);}
+\DoxyCodeLine{67         std::string name, ageStr, heightStr, weightStr, sport;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         std::getline(ss, name, \textcolor{charliteral}{','});}
+\DoxyCodeLine{70         std::getline(ss, ageStr, \textcolor{charliteral}{','});}
+\DoxyCodeLine{71         std::getline(ss, heightStr, \textcolor{charliteral}{','});}
+\DoxyCodeLine{72         std::getline(ss, weightStr, \textcolor{charliteral}{','});}
+\DoxyCodeLine{73         std::getline(ss, sport);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75         \textcolor{keywordtype}{int} age    = std::stoi(ageStr);}
+\DoxyCodeLine{76         \textcolor{keywordtype}{int} height = std::stoi(heightStr);}
+\DoxyCodeLine{77         \textcolor{keywordtype}{int} weight = std::stoi(weightStr);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         arr[count++] = \mbox{\hyperlink{classAthlete}{Athlete}}(name, age, height, weight, sport);}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     file.close();}
+\DoxyCodeLine{83 \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

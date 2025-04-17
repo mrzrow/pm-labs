@@ -1,0 +1,46 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Lab 1}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Athlete Class Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{8}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Constructor \& Destructor Documentation}{8}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Athlete()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{8}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}Athlete()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{8}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}$\sim $Athlete()}{8}{subsubsection.4.1.2.3}%
+\contentsline {subsection}{\numberline {4.1.3}Member Function Documentation}{8}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}operator"!=()}{9}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}operator$<$()}{9}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}operator$<$=()}{9}{subsubsection.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}operator==()}{9}{subsubsection.4.1.3.4}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}operator$>$()}{9}{subsubsection.4.1.3.5}%
+\contentsline {subsubsection}{\numberline {4.1.3.6}operator$>$=()}{9}{subsubsection.4.1.3.6}%
+\contentsline {subsection}{\numberline {4.1.4}Member Data Documentation}{10}{subsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.4.1}age}{10}{subsubsection.4.1.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.4.2}height}{10}{subsubsection.4.1.4.2}%
+\contentsline {subsubsection}{\numberline {4.1.4.3}name}{10}{subsubsection.4.1.4.3}%
+\contentsline {subsubsection}{\numberline {4.1.4.4}sport}{10}{subsubsection.4.1.4.4}%
+\contentsline {subsubsection}{\numberline {4.1.4.5}weight}{10}{subsubsection.4.1.4.5}%
+\contentsline {chapter}{\numberline {5}File Documentation}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}athlete.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}athlete.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{12}{section.5.2}%
+\contentsline {section}{\numberline {5.3}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{12}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Function Documentation}{13}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}main()}{13}{subsubsection.5.3.1.1}%
+\contentsline {section}{\numberline {5.4}sorting\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}algs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{13}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{14}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}downHeap()}{14}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}heapSort()}{15}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.1.3}insertSort()}{15}{subsubsection.5.4.1.3}%
+\contentsline {subsubsection}{\numberline {5.4.1.4}quickSortR()}{15}{subsubsection.5.4.1.4}%
+\contentsline {subsubsection}{\numberline {5.4.1.5}standartSort()}{16}{subsubsection.5.4.1.5}%
+\contentsline {section}{\numberline {5.5}sorting\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}algs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.5.5}%
+\contentsline {section}{\numberline {5.6}utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{17}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Function Documentation}{18}{subsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.1}fillAthleteArray()}{18}{subsubsection.5.6.1.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.2}generateAthletesCSV()}{18}{subsubsection.5.6.1.2}%
+\contentsline {subsubsection}{\numberline {5.6.1.3}randomString()}{18}{subsubsection.5.6.1.3}%
+\contentsline {section}{\numberline {5.7}utils.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.5.7}%
